@@ -1,0 +1,13 @@
+apply plugin: "java"
+apply plugin: "idea"
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.12'
+}
+
+repositories {
+    mavenCentral()
+    maven { url "http://repo.spring.io/milestone" }
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+}
+
