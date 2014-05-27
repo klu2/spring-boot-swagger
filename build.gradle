@@ -1,5 +1,17 @@
+buildscript {
+    repositories {
+        maven { url "http://repo.spring.io/libs-snapshot" }
+        mavenLocal()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.0.2.RELEASE")
+    }
+}
+
 apply plugin: "java"
+apply plugin: 'eclipse'
 apply plugin: "idea"
+apply plugin: 'spring-boot'
 
 task wrapper(type: Wrapper) {
     gradleVersion = '1.12'
@@ -7,7 +19,13 @@ task wrapper(type: Wrapper) {
 
 repositories {
     mavenCentral()
+    maven { url "http://repo.spring.io/libs-snapshot" }
     maven { url "http://repo.spring.io/milestone" }
     maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("com.fasterxml.jackson.core:jackson-databind")
 }
 
