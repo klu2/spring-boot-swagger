@@ -27,5 +27,7 @@ repositories {
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("com.fasterxml.jackson.core:jackson-databind")
+
+    compile 'com.mangofactory:swagger-springmvc:0.8.4-SNAPSHOT'
 }
 
