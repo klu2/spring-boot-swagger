@@ -29,5 +29,7 @@ dependencies {
     compile("com.fasterxml.jackson.core:jackson-databind")
 
     compile 'com.mangofactory:swagger-springmvc:0.8.4-SNAPSHOT'
+
+    runtime 'org.webjars:swagger-ui:2.0.17'
 }
 
